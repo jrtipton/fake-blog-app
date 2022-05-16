@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fake-blog-app
+  labels:
+    app: fake-blog-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fake-blog-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: fake-blog-app
+    spec:
+      containers:
+      - image: jrtipton/fake-blog-app:latest
+        imagePullPolicy: Always
+        name: fake-blog-app
+        ports:
+        - containerPort: 3000
+          protocol: TCP
