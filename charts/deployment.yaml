@@ -4,7 +4,7 @@ metadata:
   name: fake-blog-app
   labels:
     app: fake-blog-app
-  namespace: default
+  namespace: fake-blog-app
 spec:
   replicas: 1
   selector:
