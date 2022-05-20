@@ -6,6 +6,7 @@ spec:
   selector:
     app: fake-blog-app
   type: LoadBalancer
+  allocateLoadBalancerNodePorts: true
   ports:
    -  protocol: TCP
       port: 80
