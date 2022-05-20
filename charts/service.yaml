@@ -5,6 +5,7 @@ metadata:
 spec:
   selector:
     app: fake-blog-app
+  type: loadBalancer
   ports:
    -  protocol: TCP
       port: 80
