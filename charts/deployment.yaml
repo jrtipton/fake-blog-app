@@ -21,7 +21,7 @@ spec:
         app: fake-blog-app
     spec:
       containers:
-      - image: jrtipton/fake-blog-app:2
+      - image: jrtipton/fake-blog-app:3
         imagePullPolicy: Always
         name: fake-blog-app
         ports:
