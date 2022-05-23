@@ -38,11 +38,7 @@ docker_build('jrtipton/fake-blog-app:2',
              #              # https://docs.tilt.dev/live_update_reference.html
              live_update=[
                  # Sync files from host to container
-                 sync('./app', '/src/'),
-                 # Execute commands inside the container when certain
-                 # paths change
-                 run('npm run build', trigger=[
-                     './next.config.js', './pages/*'])
+                 sync('./', '/app'),
              ]
              )
 
